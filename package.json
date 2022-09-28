@@ -21,6 +21,7 @@
     "homepage": "https://github.com/Taaniel-Ztan/learnWebPack.git#readme",
     "dependencies": {
         "twig-loader": "^0.5.5",
+        "vue-router": "^4.1.5",
         "webpack": "^5.74.0"
     },
     "devDependencies": {
