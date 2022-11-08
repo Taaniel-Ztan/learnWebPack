@@ -2,7 +2,7 @@
 <div class="tabs">
   <ul>
         <!-- <li class="is-active"><a>Pictures</a></li> -->
-        <li @click="active=index" :class="{'is-active': current===link.path}" v-for="(link, index) in links" :key="index">
+        <li @click="active=index" :class="{'is-active': current===link.path}" v-for="(link, index) in links" :key="index" id="button is-white">
             <router-link :to="link.path">{{link.name}}</router-link>
             </li>
         </ul>
@@ -17,5 +17,4 @@ export default {
 </script>
 
 <style>
-
-</style>
+</style> 

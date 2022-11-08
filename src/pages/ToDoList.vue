@@ -6,13 +6,13 @@
                 <input class="input" type="text" v-model="newItem" @keydown.enter="addItem()">
             </p>
             <p class="control">
-                <button class="button is-primary" @click="addItem()">Add</button> 
+                <button class="button is-white" @click="addItem()">Add</button> 
             </p>           
       </div>
       <div class="content">
-          <item-list title="All Items" :items="items"></item-list>
-          <item-list title="Done Items" :items="doneItems"></item-list>
-          <item-list title="Not Done Items" :items="notDoneItems"></item-list>
+          <item-list  title="All Items" :items="items"></item-list>
+          <item-list  title="Done Items" :items="doneItems"></item-list>
+          <item-list  title="Not Done Items" :items="notDoneItems"></item-list>
           </div>
     </section>
 </div>
@@ -55,5 +55,7 @@ export default {
 </script>
 
 <style>
-
+body {
+    color: rgb(1, 9, 116);
+}
 </style>
