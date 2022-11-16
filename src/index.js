@@ -16,6 +16,7 @@ import Map from './pages/Map.vue';
 import Game from './pages/Game.vue';
 import Chat from './pages/Chat.vue';
 
+
 const routes = [
     { path: '/', component: Chat, name: 'Chat'},
     { path: '/game', component: Game, name: 'Game'},
