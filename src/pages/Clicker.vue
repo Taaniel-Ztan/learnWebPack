@@ -6,8 +6,8 @@
             <b>{{cps}} ~CLICKS PER SECOND~</b>  
             <img @click="clickClick()" :class="{'click': clickClass}" src="https://static.vecteezy.com/system/resources/previews/008/506/564/original/watermelon-split-cartoon-png.png">   
         </div>
-        <div class="column">
-            <button @click="upgrade(0.1, 10)" class="button is-white" :disabled="clicks<10">Osta 0.1 klikke sekundis 10 kliki eest</button> 
+        <div class="columnC">
+            <button @click="upgrade(0.1, 10)" class="button is-white" :disabled="clicks<10">Osta 0.1 klikke sekundis 10 kliki eest</button>     
             <br>
             <br>
             <button @click="upgrade(1, 100)" class="button is-white" :disabled="clicks<100">Osta 1 klikke sekundis 100 kliki eest</button> 
@@ -46,6 +46,7 @@ export default {
             this.clicks += this.cps;
             this.clicks = parseFloat(this.clicks.toFixed(1));
         }, 1000);
+
     },
     data(){
         return {
@@ -88,9 +89,26 @@ export default {
 }
 
 
+    
+
 </script>
 
 <style scoped>
+
+    .button{
+    color: rgb(14, 14, 122);
+    background-color: aqua;
+    font-family: fantasy;
+    
+    }
+    .columnC {
+        position: absolute;
+        left: 80%;
+        top: 50px;
+        scale: 110%;
+    
+    }
+
     img.click {
         transform: scale(1.5);
         transition: 0.5s;
