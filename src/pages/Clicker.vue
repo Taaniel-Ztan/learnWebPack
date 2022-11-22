@@ -10,25 +10,25 @@
             <button @click="upgrade(0.1, 10)" class="button is-white" :disabled="clicks<10">Osta 0.1 klikke sekundis 10 kliki eest</button>     
             <br>
             <br>
-            <button @click="upgrade(1, 100)" class="button is-white" :disabled="clicks<100">Osta 1 klikke sekundis 100 kliki eest</button> 
+            <button @click="upgradeA(1, 100)" class="button is-white" :disabled="clicks<100">Osta 1 klikke sekundis 100 kliki eest</button> 
             <br>
             <br>
-            <button @click="upgrade(10, 1000)" class="button is-white" :disabled="clicks<1000">Osta 10 klikke sekundis 1000 kliki eest</button>
+            <button @click="upgradeB(10, 1000)" class="button is-white" :disabled="clicks<1000">Osta 10 klikke sekundis 1000 kliki eest</button>
             <br>  
             <br>    
-            <button @click="upgrade(100, 10000)" class="button is-white" :disabled="clicks<10000">Osta 100 klikke sekundis 10000 kliki eest</button> 
+            <button @click="upgradeC(100, 10000)" class="button is-white" :disabled="clicks<10000">Osta 100 klikke sekundis 10000 kliki eest</button> 
             <br>
             <br>
-            <button @click="upgrade(1000, 100000)" class="button is-white" :disabled="clicks<100000">Osta 1000 klikke sekundis 100000 kliki eest</button> 
+            <button @click="upgradeD(1000, 100000)" class="button is-white" :disabled="clicks<100000">Osta 1000 klikke sekundis 100000 kliki eest</button> 
             <br>
             <br>
-            <button @click="upgrade(10000, 1000000)" class="button is-white" :disabled="clicks<1000000">Osta 10000 klikke sekundis 1000000 kliki eest</button> 
+            <button @click="upgradeE(10000, 1000000)" class="button is-white" :disabled="clicks<1000000">Osta 10000 klikke sekundis 1000000 kliki eest</button> 
             <br>
             <br>
-            <button @click="upgrade(100000, 10000000)" class="button is-white" :disabled="clicks<10000000">Osta 100000 klikke sekundis 10000000 kliki eest</button> 
+            <button @click="upgradeF(100000, 10000000)" class="button is-white" :disabled="clicks<10000000">Osta 100000 klikke sekundis 10000000 kliki eest</button> 
             <br>
             <br>
-            <button @click="upgrade(1000000, 100000000)" class="button is-white" :disabled="clicks<100000000">Osta 1000000 klikke sekundis 100000000 kliki eest</button> 
+            <button @click="upgradeG(1000000, 100000000)" class="button is-white" :disabled="clicks<100000000">Osta 1000000 klikke sekundis 100000000 kliki eest</button> 
             <br>
             <br>
             <button @click="upgrade1(50, 0)" class="button is-primary" :disabled="clicks<0">Võta pangast klikki laenu</button> 
@@ -75,14 +75,63 @@ export default {
             if(this.clicks >= cost){
                 this.clicks -= cost;
                 this.cps += cps;
-                alert(`PALJU ÕNNE SAAD ROHKEM KLIKKE NÜÜD!`);
+                alert(`PALJU ÕNNE SAAD NÜÜD 0.1 KLIKKI SEKUNDIS JUURDE!`);
+            }
+        },
+                upgradeA(cps, cost){
+            if(this.clicks >= cost){
+                this.clicks -= cost;
+                this.cps += cps;
+                alert(`PALJU ÕNNE SAAD NÜÜD 1 KLIKKI SEKUNDIS JUURDE!`);
+            }
+        },
+                upgradeB(cps, cost){
+            if(this.clicks >= cost){
+                this.clicks -= cost;
+                this.cps += cps;
+                alert(`PALJU ÕNNE SAAD NÜÜD 10 KLIKKI SEKUNDIS JUURDE!`);
+            }
+        },
+                upgradeC(cps, cost){
+            if(this.clicks >= cost){
+                this.clicks -= cost;
+                this.cps += cps;
+                alert(`PALJU ÕNNE SAAD NÜÜD 100 KLIKKI SEKUNDIS JUURDE!`);
+            }
+        },
+                upgradeD(cps, cost){
+            if(this.clicks >= cost){
+                this.clicks -= cost;
+                this.cps += cps;
+                alert(`PALJU ÕNNE SAAD NÜÜD 1000 KLIKKI SEKUNDIS JUURDE!`);
+            }
+        },
+                upgradeE(cps, cost){
+            if(this.clicks >= cost){
+                this.clicks -= cost;
+                this.cps += cps;
+                alert(`PALJU ÕNNE SAAD NÜÜD 10000 KLIKKI SEKUNDIS JUURDE!`);
+            }
+        },
+                pgradeF(cps, cost){
+            if(this.clicks >= cost){
+                this.clicks -= cost;
+                this.cps += cps;
+                alert(`PALJU ÕNNE SAAD NÜÜD 100000 KLIKKI SEKUNDIS JUURDE!`);
+            }
+        },
+                        pgradeF(cps, cost){
+            if(this.clicks >= cost){
+                this.clicks -= cost;
+                this.cps += cps;
+                alert(`PALJU ÕNNE SAAD NÜÜD 1000000 KLIKKI SEKUNDIS JUURDE!`);
             }
         },
         upgrade1(cps, cost){
             if(this.clicks >= cost){
                 this.clicks -= cost;
                 this.cps += cps;
-                alert(`VÕTSID LAENU PANGAST`);
+                alert(`VÕTSID 50 KLIKKI SEKUNDIS LAENU PANGAST`);
             }
         }
     }
@@ -99,14 +148,19 @@ export default {
     color: rgb(14, 14, 122);
     background-color: aqua;
     font-family: fantasy;
+    border-radius: 15%;
     
     }
     .columnC {
         position: absolute;
-        left: 80%;
-        top: 50px;
-        scale: 110%;
+        right: 90%;
+        top: 160px;
     
+    
+    }
+    .img {
+        position: absolute;
+        top:50%;
     }
 
     img.click {
